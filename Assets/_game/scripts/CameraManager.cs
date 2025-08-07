@@ -15,10 +15,10 @@ public class CameraManager : Singleton<CameraManager>
 
     private void Start()
     {
-        OnLoadLevel();
+        OnLoadLevelUFO();
     }
 
-    public void OnLoadLevel()
+    public void OnLoadLevelUFO()
     {
         Vector3 targetCam = targetTF.transform.position + offset;
         cam.transform.position = targetCam;
@@ -30,7 +30,7 @@ public class CameraManager : Singleton<CameraManager>
             cam.fieldOfView = v;
         }).SetEase(Ease.OutSine).SetDelay(1f).OnComplete(() =>
         {
-            UFO.Ins.ShowJoystick();
+            UFO.Ins?.ShowJoystick();
             FollowUFO();
             UIManager.Ins.GetUI<GamePlay>().InitTargetObjects();
         });

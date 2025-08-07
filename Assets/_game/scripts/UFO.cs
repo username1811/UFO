@@ -76,7 +76,7 @@ public class UFO : Singleton<UFO>
 
                 // Scale the object based on distance
                 float currentDistance = Vector3.Distance(aircraft.transform.position, targetTF.position);
-                targetTF.transform.localScale = Vector3.one * (0.5f + 0.5f * currentDistance / initialDistance);
+                targetTF.transform.localScale = Vector3.one * (0.4f + 0.6f * currentDistance / initialDistance);
 
                 yield return null;
             }
