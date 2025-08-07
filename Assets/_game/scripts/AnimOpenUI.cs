@@ -6,7 +6,7 @@ using UnityEngine;
 public class AnimOpenUI : MonoBehaviour
 {
     public Tween scaleTween;
-    public float duration = 0.25f;
+    public float duration = 0.3f;
     public float smallScale = 0.7f;
 
     private void OnEnable()

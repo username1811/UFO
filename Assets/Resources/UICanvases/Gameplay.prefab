@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 1295586249110033170}
   - component: {fileID: 7335528819537628396}
   m_Layer: 5
-  m_Name: top
+  m_Name: safe-area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

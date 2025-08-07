@@ -54,7 +54,6 @@ public class GamePlay : UICanvas
         TargetObject targetObject = PoolManager.Ins.Spawn<TargetObject>(PoolType.TargetObject);
         targetObject.OnInitt(targetObjectInfo);
         targetObject.transform.SetParent(targetObjectsParent);
-        targetObject.transform.localScale = Vector3.one;
         targetObject.GetComponent<RectTransform>().localPosition = new Vector2(160f * targetObjects.Count, 0);
         targetObjects.Add(targetObject);
     }
@@ -63,7 +62,7 @@ public class GamePlay : UICanvas
     {
         targetObjects.Clear();
         PoolManager.Ins.GetPool(PoolType.TargetObject).ReturnAll();
-        InitTargetObject(new TargetObjectInfo(TargetObjectType.Box, 100));
+        InitTargetObject(new TargetObjectInfo(TargetObjectType.Box, 200));
     }
 
     private void Update()
